@@ -12,7 +12,9 @@ Allows you to use Robokassa payment gateway with the Jigoshop ecommerce plugin.
 *В Robokassa прописываем:
 *
 *Оповещение о платеже - имя сайта]/jigoshop/robokassacallback.php
+
 *Ссылка об удачном платеже - имя сайта]/jigoshop/robokassathanks.php
+
 *Ссылка о неудачном платеже - имя сайта]/jigoshop/robokassacancel.php
   
 

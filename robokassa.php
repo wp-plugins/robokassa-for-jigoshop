@@ -1,9 +1,9 @@
 <?php
 /*
   Plugin Name: Robokassa Payment Gateway
-  Plugin URI: 
+  Plugin URI: http://loom-studio.net/
   Description: Allows you to use Robokassa payment gateway with the Jigoshop ecommerce plugin.
-  Version: 0.9
+  Version: 0.9.1
   Author: Denis Alekseev
   Author URI: http://loom-studio.net/
  */
@@ -168,8 +168,10 @@ class robokassa extends jigoshop_payment_gateway {
 		foreach ($args as $key => $value) {
 			$fields .= '<input type="hidden" name="'.$key.'" value="'.$value.'" />';
 		}
-		
-		return '<form action="'.$action_adr.'" method="post" id="dibs_payment_form">
+		$ret.= '<p>'.__('Спасибо за Ваш заказ, пожалуйста, нажмите кнопку ниже, чтобы заплатить.', 'woocommerce').'</p>';
+		$ret.= '<p><sub>'.__('Поддержка robokassa реализована <a href="http://loom-studio.net">loom-studio</a> и <a href="http://polzo.ru">akurganow</a>').'</sub></p>';
+
+		return $ret.'<form action="'.$action_adr.'" method="post" id="dibs_payment_form">
 				' . $fields . '
 				<input type="submit" class="button-alt" id="submit_dibs_payment_form" value="'.__('Pay via DIBS', 'jigoshop').'" /> <a class="button cancel" href="'.$order->get_cancel_order_url().'">'.__('Cancel order &amp; restore cart', 'jigoshop').'</a>
 				<script type="text/javascript">
@@ -191,7 +193,6 @@ class robokassa extends jigoshop_payment_gateway {
 							        cursor:         "wait" 
 							    } 
 							});
-						jQuery("#submit_dibs_payment_form").click();
 					});
 				</script>
 			</form>';

@@ -3,7 +3,7 @@ Contributors: loomst, akurganow
 Tags: robokassa, payment getaway, jigoshop, ecommerce
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 0.1
+Stable tag: 0.9.1
 
 Allows you to use Robokassa payment gateway with the Jigoshop ecommerce plugin.
 
@@ -17,7 +17,8 @@ Allows you to use Robokassa payment gateway with the Jigoshop ecommerce plugin.
 
 *Ссылка о неудачном платеже - имя сайта]/jigoshop/robokassacancel.php
   
-
+  
+*В бесплатной версии в корзине и на страницах оформления заказа, присутствуют ссылки на авторов плагина
 
 == Installation ==
 
@@ -27,6 +28,7 @@ Allows you to use Robokassa payment gateway with the Jigoshop ecommerce plugin.
 
 
 == Changelog ==
-    
-= 0.1 =
+= 0.9.1 =
+* Added restriction to the free version, previous version are not available
+= 0.9 =
 * First public release
